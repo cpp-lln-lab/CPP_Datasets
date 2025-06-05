@@ -7,6 +7,9 @@ from warnings import warn
 
 
 def new_dataset(name: str) -> dict[str, str | int | bool | list[str]]:
+    
+    URL_GIN = "https://gin.g-node.org/cpp-lln-lab/"
+    
     return {
         "name": name,
         "nb_subjects": "n/a",
@@ -16,7 +19,7 @@ def new_dataset(name: str) -> dict[str, str | int | bool | list[str]]:
         "has_phenotype_dir": "n/a",
         "modalities": "n/a",
         "tasks": "n/a",
-        # "raw": f"{URL_GIN}{name}",
+        "raw": f"{URL_GIN}{name}",
         "fmriprep": "n/a",
         "freesurfer": "n/a",
         "mriqc": "n/a",
@@ -34,7 +37,7 @@ def init_dataset() -> dict[str, list[Any]]:
         "modalities": [],
         "sessions": [],  # list of sessions if exist
         "tasks": [],
-        # "raw": [],  # link to raw dataset
+        "raw": [],  # link to raw dataset
         "fmriprep": [],  # link to fmriprep dataset if exists
         "freesurfer": [],  # link to freesurfer dataset if exists
         "mriqc": [],  # link to mriqc dataset if exists
