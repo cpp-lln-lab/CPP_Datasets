@@ -7,9 +7,9 @@ from warnings import warn
 
 
 def new_dataset(name: str) -> dict[str, str | int | bool | list[str]]:
-    
+
     URL_GIN = "https://gin.g-node.org/cpp-lln-lab/"
-    
+
     return {
         "name": name,
         "nb_subjects": "n/a",
